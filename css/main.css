@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+html,
+body {
+  scrollbar-color: rgba(0, 0, 0, 0.6) rgba(0, 0, 0, 0.2);
+  scrollbar-width: thin;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  background-image: url("/img/wallpaper.png");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fredoka One", sans-serif;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+a svg,
+span svg {
+  margin-right: 5px;
+  font-size: 1.5em;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-decoration: none;
+  color: #ffc400;
+}
+
+.content {
+  position: relative;
+  margin: auto;
+  background: inherit;
+  overflow: hidden;
+  box-shadow: 0 0 64px 0 rgba(0, 0, 0, 0.66);
+  z-index: 1;
+}
+
+.content:before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter:
+    blur(10px) brightness(0.33) drop-shadow(0px 0px 32px rgba(0, 0, 0, 1.0));
+
+  margin: -64px;
+}
+
+@media only screen and (max-width: 650px) {
+  .content {
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 651px) {
+  .content {
+    top: 64px;
+    bottom: 64px;
+    max-width: 80%;
+    height: calc(100% - 128px);
+    border-radius: 8px;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  .content {
+    max-width: 1000px
+  }
+}
+
+.layout {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.layout>* {
+  margin: 32px 32px 0px 32px;
+}
+
+.layout header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.layout header img {
+  flex-shrink: 0;
+  height: 160px;
+  width: 160px;
+  margin-right: 16px;
+  border-radius: 50%;
+}
+
+.layout header h1,
+.layout header p {
+  margin: 4px 0 4px 0;
+}
+
+.layout section .social-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: -8px;
+  margin-right: -8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.layout section .social-links .btn {
+  width: 128px;
+  margin: 8px;
+}
+
+.layout section .project {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.layout section .project img {
+  height: 96px;
+  width: 96px;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.layout section .project .details {
+  width: 100%;
+}
+
+.layout section .project .details h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.layout section .project .details p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.layout section .project .details .links {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.layout section .project .details .links a,
+.layout section .project .details .links span {
+  margin-right: 16px;
+}
+
+.layout section .project .details .links span {
+  color: rgba(255, 255, 255, 0.333);
+}
+
+.layout footer {
+  color: rgba(255, 255, 255, 0.333);
+  margin-bottom: 32px;
+}
+
+.separator {
+  min-height: 1px;
+  max-height: 1px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  background-color: rgba(255, 255, 255, 0.333);
+}
+
+/* Adjustments for small screens. */
+@media only screen and (max-width: 450px) {
+  .layout header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .layout section .project {
+    flex-direction: column;
+  }
+
+  .layout section .project img {
+    display: none;
+  }
+
+  .layout section .project .details .links {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+/* Only appears in Edge and IE. */
+:-ms-lang(x),
+.layout {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Button */
+.btn {
+  border-radius: 8px;
+  padding: 8px 8px;
+  vertical-align: middle;
+  background-color: #e26682;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  transition: filter 0.15s ease-in-out;
+}
+
+.btn:hover {
+  animation-play-state: running;
+  filter: brightness(75%);
+}
+
+.github {
+  background-color: #292d32;
+}
+
+.twitter {
+  background-color: #1da1f2;
+}
+
+.discord {
+  background-color: #7289da;
+}
+
+.senko {
+  background-color: #f39800;
+}
+
+
+/* CSS for the avatar animation. */
+#avatar {
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.wiggle {
+  animation: wiggle 5s linear infinite;
+  animation-play-state: running;
+}
+
+@keyframes wiggle {
+  from {
+    transform: rotate(0deg);
+  }
+
+  90% {
+    transform: rotate(0deg);
+  }
+
+  92% {
+    transform: rotate(1deg);
+  }
+
+  94% {
+    transform: rotate(-1deg);
+  }
+
+  96% {
+    transform: rotate(1deg);
+  }
+
+  98% {
+    transform: rotate(-1deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.clicked {
+  opacity: 1;
+  animation: clicked 0.15s linear;
+  animation-delay: 0s;
+  animation-play-state: running;
+  cursor: default !important;
+}
+
+@keyframes clicked {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: scale(1.025) rotate(1deg);
+  }
+
+  50% {
+    transform: scale(1.025) rotate(-1deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.label {
+  border-radius: 8px;
+  color: #fff;
+  background-color: rgba(0,0,0,0.3);
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.6em;
+  margin: auto 16px auto 8px;
+  padding: 4px 6px 4px 6px;
+}
