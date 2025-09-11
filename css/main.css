@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 html,
 body {
@@ -14,6 +14,8 @@ body {
   background-image: url("/img/wallpaper.png");
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 h1,
@@ -63,8 +65,7 @@ h5 {
   left: 0;
   right: 0;
   bottom: 0;
-  filter:
-    blur(10px) brightness(0.33) drop-shadow(0px 0px 32px rgba(0, 0, 0, 1.0));
+  filter: blur(10px) brightness(0.33) drop-shadow(0px 0px 32px rgba(0, 0, 0, 1));
 
   margin: -64px;
 }
@@ -90,7 +91,7 @@ h5 {
 
 @media only screen and (min-width: 1250px) {
   .content {
-    max-width: 1000px
+    max-width: 1000px;
   }
 }
 
@@ -100,7 +101,7 @@ h5 {
   overflow-y: scroll;
 }
 
-.layout>* {
+.layout > * {
   margin: 32px 32px 0px 32px;
 }
 
@@ -143,6 +144,10 @@ h5 {
   flex-direction: row;
   align-items: center;
   margin-bottom: 16px;
+  transition: box-shadow 0.2s, border 0.2s;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 16px;
 }
 
 .layout section .project img {
@@ -152,6 +157,11 @@ h5 {
   flex-shrink: 0;
 }
 
+.layout section .project:hover {
+  border: 2px solid #ffc400;
+  box-shadow: 0 0 16px 0 #ffc40055;
+  background: rgba(255, 196, 0, 0.07);
+}
 .layout section .project .details {
   width: 100%;
 }
@@ -261,7 +271,6 @@ h5 {
   background-color: #f39800;
 }
 
-
 /* CSS for the avatar animation. */
 #avatar {
   border-radius: 100%;
@@ -338,7 +347,7 @@ h5 {
 .label {
   border-radius: 8px;
   color: #fff;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   font-family: "Open Sans", sans-serif;
   font-size: 0.6em;
   margin: auto 16px auto 8px;
