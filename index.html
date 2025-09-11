@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="./css/main.css" />
 
     <script src="js/info.js" defer></script>
+    <script src="js/age.js" defer></script>
     <script src="js/currentYear.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
   </head>
@@ -82,72 +83,7 @@
 
         <section>
           <h1>Personal Projects</h1>
-
-          <div class="project">
-            <a href="https://www.slimebluking.net/Senko-san/"
-              ><img alt="Project Icon" src="img/projects/senko.png"
-            /></a>
-            <div class="details">
-              <h2>
-                <a href="https://www.slimebluking.net/Senko-san/">Senko-san</a
-                ><span class="label">Online</span>
-              </h2>
-              <p>An Senko-san themed bot for Discord.</p>
-              <p>DM me if you want my bot.</p>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <div class="project">
-            <img alt="Project Icon" src="img/projects/EasyMC-Logo.png" />
-            <div class="details">
-              <h2>EasyMC<span class="label">Closed</span></h2>
-              <p>
-                A factions Minecraft server, which also includes other modes
-                like Survival.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <div class="project">
-            <a href="https://github.com/SlimeBluKing/GTX-Oscar"
-              ><img alt="Project Icon" src="img/projects/oscar.png"
-            /></a>
-            <div class="details">
-              <h2>
-                <a href="https://github.com/SlimeBluKing/GTX-Oscar"
-                  >[GTX] Oscar Discord Bot</a
-                ><span class="label">Discontinued</span>
-              </h2>
-              <p>
-                Since I left Team GTX I decided to quit [GTX] Oscar development
-                I put his source code online.
-              </p>
-              <p>P.S.: Fully italian bot.</p>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <div class="project">
-            <a href="https://github.com/SlimeBluKing/Shiro-san"
-              ><img alt="Project Icon" src="img/projects/shiro.png"
-            /></a>
-            <div class="details">
-              <h2>
-                <a href="https://github.com/SlimeBluKing/Shiro-san">Shiro-san</a
-                ><span class="label">Discontinued</span>
-              </h2>
-              <p>
-                A bot for
-                <a href="https://discord.gg/NXckFhDyDy">Zeta's Community</a>.
-              </p>
-              <p>P.S.: Fully italian bot.</p>
-            </div>
-          </div>
+          <div id="projects-container"></div>
         </section>
 
         <div class="separator"></div>
@@ -157,6 +93,16 @@
           under the MIT License.<br />
           Thanks <a href="https://github.com/NotMaxee/">Maxee</a> ヾ(•ω•`)o
         </footer>
+      </div>
+    </div>
+
+    <div id="projectModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <img id="modal-img" src="" alt="Project Icon" />
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+        <div id="modal-links"></div>
       </div>
     </div>
   </body>
