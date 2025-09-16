@@ -413,8 +413,19 @@ h5 {
   border-radius: 16px;
 }
 
+.modal-content #modal-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 24px;
+  margin-top: 16px;
+}
+
 .modal-content #modal-links a {
-  margin: 0 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 !important;
 }
 
 .close-button {
