@@ -13,6 +13,27 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       },
     },
+    moonsong: {
+      title: "Moonsong",
+      status: "Coming Soon",
+      shortDescription: "The moon's songs are unveiling before you - awaited are the heroes to discover the mystery of a world ruled by music!",
+      longDescription: 'A new Song of the Moon is about to begin - are you ready to take part on the journey?\n\n<iframe width="420" height="236" src="https://www.youtube.com/embed/n_CnLDdTQn8?si=i2JiTJJkwPZxqh59" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+      image: "img/projects/moonsong.png",
+      links: {
+        Website: {
+          url: "https://www.moonsong-game.com/",
+          icon: "fa-solid fa-globe",
+        },
+        "X Profile": {
+          url: "https://x.com/Moonsong_Game",
+          icon: "fa-brands fa-x-twitter",
+        },
+        Youtube: {
+          url: "https://www.youtube.com/@Moonsong_Game",
+          icon: "fa-brands fa-youtube",
+        }
+      },
+    },
     easymc: {
       title: "EasyMC",
       status: "Closed",
