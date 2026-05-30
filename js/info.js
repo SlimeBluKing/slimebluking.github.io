@@ -129,6 +129,8 @@ document.addEventListener("DOMContentLoaded", () => {
     el.addEventListener("click", () => {
       const p = projects[el.dataset.projectId];
       if (!p) return;
+
+      window.SoundEffects?.playDialogSound?.();
       modalImg.src = p.image;
       modalTitle.textContent = p.title;
       modalDescription.innerHTML = p.longDescription.replace(/\n/g, "<br>");
@@ -137,9 +139,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  closeButton.addEventListener("click", () =>
-    modal.classList.remove("modal-visible")
-  );
+  closeButton.addEventListener("click", () => {
+    window.SoundEffects?.playBackSound?.();
+    modal.classList.remove("modal-visible");
+  });
   window.addEventListener("click", (e) => {
     if (e.target === modal) modal.classList.remove("modal-visible");
   });
